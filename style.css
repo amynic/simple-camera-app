@@ -12,10 +12,10 @@ html, body{
     object-fit: cover;
 }
 
-#camera--view, #camera--sensor, #camera--output{
+/*#camera--view, #camera--sensor, #camera--output{
     transform: scaleX(-1);
     filter: FlipH;
-}
+}*/
 
 #camera--trigger{
     width: 200px;
