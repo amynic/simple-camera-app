@@ -1,12 +1,12 @@
-// Set constraints for the video stream
-var constraints = { video: { facingMode: { exact :"environment", } }, audio: false };
-var track = null;
-
 // Define constants
 const cameraView = document.querySelector("#camera--view"),
     cameraOutput = document.querySelector("#camera--output"),
     cameraSensor = document.querySelector("#camera--sensor"),
     cameraTrigger = document.querySelector("#camera--trigger");
+
+// Set constraints for the video stream
+var constraints = { video: { facingMode: { exact :"environment" } }, audio: false };
+var track = null;
 
 // Access the device camera and stream to cameraView
 function cameraStart() {
