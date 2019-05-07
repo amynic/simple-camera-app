@@ -1,5 +1,8 @@
 const fetch = require('node-fetch');
+const path = require('path');
+const fs = require('fs');
 
+//running locally - uncomment
 require('dotenv').config()
 
 const {
@@ -9,14 +12,19 @@ const {
   URL
 } = process.env;
 
-const fs = require('fs');
-const path = require('path');
+console.log('api key', API_KEY);
+console.log('url', URL);
+
+
 
 async function getResponsePredictionApi(body, contentType, isImage) {
   const urlAppend = isImage ? '/image' : '/url';
   try {
+    const fullURL = URL + urlAppend;
+
     console.log(`running fetch POST ${contentType}`);
-    const response = await fetch(URL + urlAppend, {
+    console.log('full url', fullURL)
+    const response = await fetch(fullURL, {
       headers: {
         "Prediction-Key": API_KEY,
         "Content-Type": contentType

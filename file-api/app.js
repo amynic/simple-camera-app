@@ -20,7 +20,7 @@ httpServer.listen(3000, () => {
 app.use(cors());
 
 // put the HTML file containing your form in a directory named "public" (relative to where this script is located)
-app.get("/", express.static(path.join(__dirname, "./public")));
+app.get("/info", (req, res) => {res.send('hello')});
 
 
 

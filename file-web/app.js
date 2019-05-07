@@ -3,6 +3,7 @@ const input = document.getElementById('file');
 const target = document.getElementById('result');
 
 const uploadURL = `http://localhost:3000/upload`;
+//const uploadURL = `https://amysburgers.azurewebsites.net/upload`;
 
 const formatResponse = (response) => {
   console.log('response', response);
